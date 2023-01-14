@@ -1,0 +1,8 @@
+.coco__info{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 24;
+    column-gap: 17px;
+    text-align: center;
+}

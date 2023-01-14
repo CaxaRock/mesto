@@ -1,0 +1,8 @@
+.elements__white-area{
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 246px;
+}

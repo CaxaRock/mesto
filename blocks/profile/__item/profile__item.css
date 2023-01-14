@@ -1,0 +1,8 @@
+.profile__item{
+    display: grid;
+    flex-direction: row;
+    grid-template-areas: 
+    "photo name pencil plus-btn"
+    "photo describe describe plus-btn";
+    grid-template-columns: 150px  351px 15px 1fr;
+}
