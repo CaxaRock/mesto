@@ -1,8 +1,37 @@
 .footer{
-    margin: 0;
+    display: flex;
+    margin: 0 auto;
     padding: 0;
-    margin-left: 200px;
     max-width: 318px;
     margin-top: 67px;
     margin-bottom: 60px;
+    margin-left: 200px;
+}
+
+
+/*1024*/
+@media screen and (max-width: 1024px) {
+    .footer{
+        margin-left: 100px;
+        max-width: calc(100% - 2*100px);
+        
+    }
+}
+
+/*768*/
+@media screen and (max-width: 768px) {
+    .footer{
+        max-width: calc(100% - 2*50px);
+        margin-left: 50px;
+    }
+}
+
+/*320*/
+@media screen and (max-width: 320px) {
+    .footer{
+        margin-top: 48px;
+        max-width: calc(100% - 2*19px);
+        margin-bottom: 36px;
+        margin-left: 19px;
+    }
 }

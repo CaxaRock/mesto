@@ -1,7 +1,6 @@
-.proofile__plus-btn{
+.profile__plus-btn{
     margin: 0;
     padding: 0;
-    position: relative;
     border: 1px solid #FFFFFF;
     background-color: rgba(28,28,28,0);
     box-sizing: border-box;
@@ -10,8 +9,19 @@
     grid-area: plus-btn;
     margin-top: 35px;
     justify-self: end;
+    cursor: pointer;
 }
 
-.proofile__plus-btn:hover{
-    cursor: pointer;
+.profile__plus-btn:hover{
+    opacity: 0.6;
+}
+
+
+/*768*/
+@media screen and (max-width: 768px) {
+    .profile__plus-btn{
+        margin: 0 auto;
+        width: 282px;
+        margin-top: 31px;
+    }
 }

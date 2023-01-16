@@ -5,3 +5,22 @@
     height: auto;
     margin-bottom: 36px;
 }
+
+/*920*/
+@media screen and (max-width: 920px) {
+    .header__logo{
+        margin-left: 18px;
+        max-width: 122px;
+    }
+}
+
+
+
+/*320*/
+@media screen and (max-width: 320px) {
+    .header__logo{
+        margin-left: 27px;
+        max-width: 104px;
+        margin-bottom: 27px;
+    }
+}

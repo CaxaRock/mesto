@@ -3,3 +3,11 @@
     padding: 0;
     max-width: 880px;
 }
+
+
+/*1024*/
+@media screen and (max-width: 1024px) {
+    .elements{
+        max-width: 100% - 40px*2;
+    }
+}

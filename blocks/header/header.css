@@ -4,3 +4,18 @@
     border-bottom: 1px solid #545454;
     opacity: 0.7;
 }
+
+/*920*/
+@media screen and (max-width: 920px) {
+    .header{
+        max-width: 700px;
+    }
+}
+
+
+/*320*/
+@media screen and (max-width: 320px) {
+    .header{
+        max-width: 700px;
+    }
+}

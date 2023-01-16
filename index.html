@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
+    <script defer src="./popup.js"></script>
 </head>
 
 <body class="page">
@@ -15,70 +16,64 @@
         <img class="header__logo" alt="лого" src="./images/logo.svg">
     </header>
     <main class="content">
+
         <section class="profile">
-            <div class="profile__item">
-                <img class="profile__photo" src="./images/profilePhoto.jpg">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <p class="profile__describe">Исследователь океана</p>
-                <button class="profile__pencil-btn"><img class="profile__pencil" src="./images/pencil.svg"></button>
-                <button class="proofile__plus-btn"><img class="profile__plus" src="./images/Plus.svg"></button>
+            <div class="profile__card">
+                <button class="profile__avatar-btn"><img class="profile__photo" src="./images/profilePhoto.jpg" alt="аватар"></button>
+                <div class="profile__edit">
+                    <div class="profile__info">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <p class="profile__describe">Исследователь океана</p>
+                    </div>
+                    <button class="profile__pencil-btn"><img class="profile__pencil" src="./images/pencil.svg"></button>
+                </div>
+                
             </div>
-            
+            <button class="profile__plus-btn"><img class="profile__plus" src="./images/Plus.svg"></button>
         </section>
 
-     <!--  <section class="coco">
-            <div class="coco__card">
-                <img class="coco__avatar" src="./images/profilePhoto.jpg" alt="foto">
-                <div class="coco__info">
-                    <h1 class="coco__title">MAN</h1>
-                    <button class="coco__edit-btn" type="button"></button>
-                    <p class="coco__describe">fngjdkfnkndd kndjf</p>
-                </div>
-            </div>
-            <button class="coco__add-btn" type="button"></button>
-        </section>--> 
         <section class="elements">
             <ul class="elements__item-list">
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Карачаевск</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Гора Эльбрус</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Домбай</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Гора Эльбрус</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Домбай</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
                 <li class="elements__item">
                     <img class="elements__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото">
                     <div class="elements__white-area">
                         <h2 class="elements__title">Карачаево-Черкесия</h2>
-                        <img class="elements__like" src="./images/like.svg" alt="">
+                        <button class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
                     </div>
                 </li>
             </ul>
@@ -91,13 +86,13 @@
 
 <div class="popup">
     <div class="popup__container">
-        <button class="popup__close-btn popup__open" type="button"></button>
+        <button class="popup__close-btn" type="button"><img class="popup__close-icon" alt="крестик" src="./images/closeIcon.svg"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__edit-form">
-            <input class="popup__input popup__input_elrment_name" type="text" value="" name="popup-input-name">
-            <input class="popup__input popup__input_elrment_job" type="text" value="" name="popup-input-job">
-            <button class="popup__submit-btn" type="submit">Сохранить</button>
+            <input class="popup__input popup__input_element_name" type="text" value="" name="popup-input-name">
+            <input class="popup__input popup__input_element_job" type="text" value="" name="popup-input-job">
         </form>
+        <button class="popup__submit-btn" type="submit">Сохранить</button>
     </div>
 </div>
 

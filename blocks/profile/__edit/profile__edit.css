@@ -1,0 +1,11 @@
+.profile__edit{
+    display: flex;
+}
+
+/*768*/
+@media screen and (max-width: 768px) {
+    .profile__card{
+        margin: 0 auto;
+        flex-direction: column;
+    }
+}

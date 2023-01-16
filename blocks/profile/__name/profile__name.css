@@ -13,4 +13,17 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: 294px;
+}
+
+/*768*/
+@media screen and (max-width: 768px) {
+    .profile__name{
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 27px;
+        max-width: 189px;
+    }
 }

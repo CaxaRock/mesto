@@ -1,9 +1,27 @@
 .elements__item-list{
-    padding: 0;
-    margin: 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     row-gap: 20px;
     column-gap: 17px;
+    padding: 0;
+}
+
+
+/*1024*/
+@media screen and (max-width: 1024px) {
+    .elements__item-list{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+}
+}
+
+/*1024*/
+@media screen and (max-width: 768px) {
+    .elements__item-list{
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;    
+}
 }
