@@ -12,7 +12,6 @@
     line-height: 32px;
     color: #000000;
     box-sizing: border-box;
-    opacity: 0.2;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
     outline: none;
 }
