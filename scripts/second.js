@@ -14,35 +14,22 @@ let newDescribe = document.querySelector(".profile__describe");
 
 
 function editPopup() {
-    popup.classList.add("popup__open")
+    popup.classList.add("popup__opened")
     nameInput.value = newUserName.textContent
     jobInput.value = newDescribe.textContent
 }
 
 function closePopup() {
-    popup.classList.remove("popup__open")
+    popup.classList.remove("popup__opened")
 }
 pencilBtn.addEventListener("click", editPopup);
 closeBtn.addEventListener("click", closePopup);
-saveBtn.addEventListener("click", closePopup)
-
-
-
 
 // Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
 function handleFormSubmit (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-                                                // Так мы можем определить свою логику отправки.
-                                                // О том, как это делать, расскажем позже.
-                                         
-    // Получите значение полей jobInput и nameInput из свойства value
-    //let jobInput = document.querySelector(".popup__input_element_name").value;
-    //let nameInput = document.querySelector(".popup__input_element_job").value;
 
-    // Выберите элементы, куда должны быть вставлены значения полей
-
-
+    saveBtn.addEventListener("click", closePopup)
     // Вставьте новые значения с помощью textContent;
 
     newUserName.textContent = nameInput.value;
