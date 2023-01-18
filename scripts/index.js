@@ -14,13 +14,13 @@ let newDescribe = document.querySelector(".profile__describe");
 
 
 function editPopup() {
-    popup.classList.add("popup__opened")
+    popup.classList.add("popup_opened")
     nameInput.value = newUserName.textContent
     jobInput.value = newDescribe.textContent
 }
 
 function closePopup() {
-    popup.classList.remove("popup__opened")
+    popup.classList.remove("popup_opened")
 }
 
 // Обработчик «отправки» формы, хотя пока
