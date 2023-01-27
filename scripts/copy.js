@@ -1,4 +1,4 @@
-let popup = document.querySelector(".popup");
+let popupProfile = document.querySelector(".popup");
 let saveBtn = document.querySelector(".popup__submit-btn");
 let closeBtn = document.querySelector(".popup__close-btn");
 let pencilBtn = document.querySelector(".profile__pencil-btn");
@@ -14,7 +14,7 @@ let newDescribe = document.querySelector(".profile__describe");
 
 
 function editPopup() {
-    popup.classList.add("popup_opened")
+    popupProfile.classList.add("popup_opened")
     nameInput.value = newUserName.textContent
     jobInput.value = newDescribe.textContent
 }
