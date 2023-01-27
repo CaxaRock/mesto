@@ -1,41 +1,42 @@
-let popup = document.querySelector(".popup");
-let saveBtn = document.querySelector(".popup__submit-btn");
-let closeBtn = document.querySelector(".popup__close-btn");
-let pencilBtn = document.querySelector(".profile__pencil-btn");
-let popupContainer = document.querySelector(".popup__container")
+const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ];
 
-let formElement = document.querySelector(".popup__edit-form"); // Воспользуйтесь методом querySelector()
-// Находим поля формы в DOM
-let nameInput = document.querySelector(".popup__input_element_name");
-let jobInput = document.querySelector(".popup__input_element_job");
-let newUserName = document.querySelector(".profile__name");
-let newDescribe = document.querySelector(".profile__describe");
+  const template = document.querySelector("#template__card").content.querySelector(".elements__item");
+  const cardList = document.querySelector(".elements__item-list");
+  const sumbitBtnCard = document.querySelector(".popup__submit-btn_card");
+  const inputCardTitle = document.querySelector(".popup__input_card_title");
+  const inputCardLink = document.querySelector(".popup__input_card_link");
 
-
-
-function editPopup() {
-    popup.classList.add("popup_opened")
-    nameInput.value = newUserName.textContent
-    jobInput.value = newDescribe.textContent
-}
-
-function closePopup() {
-    popup.classList.remove("popup_opened")
-}
-
-// Обработчик «отправки» формы, хотя пока
-function handleFormSubmit (evt) {
-    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-
-    closePopup()
-
-    // Вставьте новые значения с помощью textContent;
-    newUserName.textContent = nameInput.value;
-    newDescribe.textContent = jobInput.value;
-}
-
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-formElement.addEventListener('submit', handleFormSubmit); 
-pencilBtn.addEventListener("click", editPopup);
-closeBtn.addEventListener("click", closePopup);
+  function renderCard () {
+    initialCards.forEach((item) => {
+       const card = template.cloneNode(true);
+       card.querySelector(".elements__title").textContent = item.name;
+       card.querySelector(".elements__img").src = item.link;
+       cardList.prepend(card)
+    })
+  };
+  renderCard();

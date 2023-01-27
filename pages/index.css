@@ -37,9 +37,9 @@
 @import url(../blocks/popup/popup_opened.css);
 @import url(../blocks/popup/__edit-form/popup__edit-form.css);
 @import url(../blocks/popup/__close-icon/popup__close-icon.css);
-@import url();
-@import url();
-@import url();
+@import url(../blocks/elements/__like-btn/_active/elements__like-btn_active.css);
+@import url(../blocks/elements/__delete-btn/elements__delete-btn.css);
+@import url(../blocks/template/template__elements/template__elements.css);
 @import url();
 @import url();
 @import url();

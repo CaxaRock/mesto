@@ -9,6 +9,9 @@
     margin-top: 36px;
     margin-left: 19px;
     cursor: pointer;
+    background-image: url(../../../images/Edit_Button.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .profile__pencil-btn:hover{

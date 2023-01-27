@@ -24,7 +24,7 @@
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
                         <p class="profile__describe">Исследователь океана</p>
                     </div>
-                    <button type="button" class="profile__pencil-btn"><img class="profile__pencil" alt="карандаш" src="./images/pencil.svg"></button>
+                    <button type="button" class="profile__pencil-btn"></button>
                 </div>
                 
             </div>
@@ -33,48 +33,16 @@
 
         <section class="elements">
             <ul class="elements__item-list">
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Карачаевск</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Гора Эльбрус</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Домбай</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Гора Эльбрус</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Домбай</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
-                <li class="elements__item">
-                    <img class="elements__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="фото">
-                    <div class="elements__white-area">
-                        <h2 class="elements__title">Карачаево-Черкесия</h2>
-                        <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
-                    </div>
-                </li>
+                <template class="template__elements" id="template__card">
+                    <article class="elements__item">
+                        <button class="elements__delete-btn" type="button"></button>
+                        <img class="elements__img" src="" alt="фото" url="">
+                        <div class="elements__white-area">
+                            <h2 class="elements__title"></h2>
+                            <button type="button" class="elements__like-btn"><img class="elements__like" src="./images/like.svg" alt="лайк"></button>
+                        </div>
+                    </article>
+                </template>
             </ul>
         </section>
     </main>
@@ -83,18 +51,36 @@
 </footer>
 
 
-<div class="popup">
+<div class="popup popup_type_edit">
     <div class="popup__container">
         <button class="popup__close-btn" type="button"><img class="popup__close-icon" alt="крестик" src="./images/closeIcon.svg"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__edit-form" name="edit-form" method="GET" action="#">
             <input class="popup__input popup__input_element_name" type="text" value="" name="popup-input-name">
             <input class="popup__input popup__input_element_job" type="text" value="" name="popup-input-job">
-            <button class="popup__submit-btn" type="submit">Сохранить</button>
+            <button class="popup__submit-btn popup__submit-btn_profile" type="submit">Сохранить</button>
         </form>
-        
     </div>
 </div>
+
+<div class="popup popup_type_add-card">
+    <div class="popup__container">
+        <button class="popup__close-btn" type="button"><img class="popup__close-icon" alt="крестик" src="./images/closeIcon.svg"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__add-form" name="add-form" method="GET" action="#">
+            <input class="popup__input popup__input_card_title" 
+            type="text" value="" 
+            name="popup-input-card-name"
+            placeholder="Название">
+            <input class="popup__input popup__input_card_link" 
+            type="url" value="" 
+            name="popup-input-link"
+            placeholder="Ссылка на картинку">
+            <button class="popup__submit-btn popup__submit-btn_card" type="submit">Сохранить</button>
+        </form>
+    </div>
+</div>
+
 
 <script defer src="./scripts/index.js"></script>
 </body>

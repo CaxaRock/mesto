@@ -1,13 +1,5 @@
 .elements__img{
     border-radius: 10px 10px 0 0;
-    max-width: 282px;
-    max-height: 282px;
-}
-
-/* 1024 */
-@media screen and (max-width: 1024px) {
-    .elements__img{
-        max-width: 400px;
-       
-    }
+    width: 282px;
+    height: 282px;
 }
