@@ -43,7 +43,7 @@ const initialCards = [
   const closePopupCardBtn = document.querySelector(".popup__close-btn_type_card");
   const popupImg = document.querySelector(".popup_type_img");
   const closePopupImgBtn = document.querySelector(".popup__close-btn_type_img");
-  const imgPopupImg = document.querySelector(".elements__img_active");
+  const imgPopupImg = document.querySelector(".popup__img");
 
 
 
@@ -64,7 +64,6 @@ const initialCards = [
        imgCard.addEventListener("click", (item) => {
         popupImg.classList.add("popup_opened");
         imgPopupImg.src = card.querySelector(".elements__img").src
-        //card.querySelector(".elements__img").src = imgPopupImg.src
        });
        
        return card;
