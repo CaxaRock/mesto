@@ -64,6 +64,7 @@ const initialCards = [
        imgCard.addEventListener("click", (item) => {
         popupImg.classList.add("popup_opened");
         imgPopupImg.src = card.querySelector(".elements__img").src
+        imgPopupImg.alt = card.querySelector(".elements__img").alt
        });
        
        return card;
