@@ -5,9 +5,12 @@
     background-color: rgba(28,28,28,0);
     cursor: pointer;
     width: 22px;
-    height: 22px;
+    height: 19px;
     margin-top: 25px;
     margin-right: 2px;
+    background: transparent url(../../../images/like.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .elements__like-btn:hover{

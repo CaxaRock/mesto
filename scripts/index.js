@@ -40,7 +40,7 @@ const initialCards = [
   const nameFromProfile = document.querySelector(".profile__name");
   const jobFromProfile = document.querySelector(".profile__describe");
   const closePopupProfileBtn = document.querySelector(".popup__close-btn_type_profile");
-  const closePopupCardBtn = document.querySelector(".popup__close-btn_type_card")
+  const closePopupCardBtn = document.querySelector(".popup__close-btn_type_card");
 
 
 
@@ -57,6 +57,14 @@ const initialCards = [
     const card = template.cloneNode(true);
        card.querySelector(".elements__title").textContent = item.name;
        card.querySelector(".elements__img").src = item.link;
+       card.querySelector(".elements__img").alt = item.name;
+       card.querySelector(".elements__delete-btn").addEventListener("click", () => {
+        card.remove()
+       });
+       const likeCardBtn = card.querySelector(".elements__like-btn");
+       likeCardBtn.addEventListener("click", () => {
+        likeCardBtn.classList.toggle("elements__like-btn_active")
+       });
        
        return card;
   };
@@ -76,6 +84,8 @@ const initialCards = [
   };
   function closePopupCard() {
     popupCard.classList.remove("popup_opened");
+    inputCardTitle.value = "";
+    inputCardLink.value = "";
   };
 
   
