@@ -6,6 +6,8 @@
     margin-top: 67px;
     margin-bottom: 60px;
     margin-left: 200px;
+    flex-grow: 1;
+    align-items: end;
 }
 
 

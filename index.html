@@ -34,14 +34,14 @@
         <section class="elements">
             <ul class="elements__item-list">
                 <template class="template__elements" id="template__card">
-                    <article class="elements__item">
+                    <li class="elements__item">
                         <button class="elements__delete-btn" type="button"></button>
                         <img class="elements__img" src="#" alt="" url="">
                         <div class="elements__white-area">
                             <h2 class="elements__title"></h2>
                             <button type="button" class="elements__like-btn"></button>
                         </div>
-                    </article>
+                    </li>
                 </template>
             </ul>
         </section>
@@ -85,11 +85,12 @@
     <figure class="popup__container-img">
         <img class="popup__img" src="#" url="">
         <button class="popup__close-btn popup__close-btn_type_img" type="button"></button>
+        <figcaption class="popup__caption"></figcaption>
     </figure>
 </div>
 
 
-<script defer src="./scripts/index.js"></script>
+<script type="module" defer src="./scripts/index.js"></script>
 </body>
 
 </html>
