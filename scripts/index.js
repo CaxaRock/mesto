@@ -40,10 +40,10 @@ import {initialCards} from "./cardsValue.js"
        });
        const imgCard = card.querySelector(".elements__img");
        imgCard.addEventListener("click", () => {
-        popupImg.classList.add("popup_opened");
         imgPopupImg.src = cardImg.src
         imgPopupImg.alt = cardImg.alt
         popupCaption.textContent = cardImg.alt
+        openModal(popupImg)
        });
        
        return card;
