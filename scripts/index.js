@@ -1,5 +1,6 @@
 import {initialCards} from "./cardsValue.js"
 
+// const
   const template = document.querySelector("#template__card").content.querySelector(".elements__item");
   const cardList = document.querySelector(".elements__item-list");
   const sumbitBtnCard = document.querySelector(".popup__submit-btn_card");
@@ -23,7 +24,7 @@ import {initialCards} from "./cardsValue.js"
   const formPopupProfile = document.querySelector(".popup__edit-form");
   const formPopupCard = document.querySelector(".popup__add-form")
 
-
+// funtions
 
   function createCard(item){
     const card = template.cloneNode(true);
@@ -79,6 +80,8 @@ import {initialCards} from "./cardsValue.js"
 
   renderCard(initialCards);
 
+  // listeners
+
   popupCardBtn.addEventListener("click", () => openModal(popupCard));
   
   btnClosePopupImg.addEventListener("click", () => closeModal(popupImg));
@@ -93,6 +96,7 @@ import {initialCards} from "./cardsValue.js"
 
   formPopupCard.addEventListener("submit", (event) =>{
     event.preventDefault();
+    disableButton(sumbitBtnCard, "popup__button_disabled");
     const title = inputCardTitle.value;
     const link = inputCardLink.value;
     const card = createCard({name: title, link: link});
@@ -102,7 +106,26 @@ import {initialCards} from "./cardsValue.js"
 
   formPopupProfile.addEventListener("submit", (event) =>{
     event.preventDefault();
+    disableButton(submitProfileBtn, "popup__button_disabled");
     nameFromProfile.textContent = inputProfileName.value;
     jobFromProfile.textContent = inputProfileJob.value;
     closeModal(popupProfile);
   });
+
+  popupProfile.addEventListener("click", function(event) {
+    if (event.target === event.currentTarget) {
+      closeModal(popupProfile)
+    }
+  })
+
+  popupCard.addEventListener("click", function(event) {
+    if (event.target === event.currentTarget) {
+      closeModal(popupCard)
+    }
+  })
+
+  popupImg.addEventListener("click", function(event) {
+    if (event.target === event.currentTarget) {
+      closeModal(popupImg)
+    }
+  })
