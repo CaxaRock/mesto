@@ -41,7 +41,7 @@ const showInputError = (inputElement, errorElement, invalidInputClass) => {
   const handlerFormInput = (
     evt, form, invalidInputClass, formSubmitButtonElement, disableSubmitButtonClass, inputList) => {
     const inputElement = evt.target;
-    const errorElement = form.querySelector(`.form__item-error_field_${inputElement.name}`);
+    const errorElement = form.querySelector(`.popup__input-error_field_${inputElement.name}`);
     const buttonState = hasInvalidInput(inputList);
     
     checkInputValidity(inputElement, errorElement, invalidInputClass);

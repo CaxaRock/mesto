@@ -112,20 +112,19 @@ import {initialCards} from "./cardsValue.js"
     closeModal(popupProfile);
   });
 
-  popupProfile.addEventListener("click", function(event) {
-    if (event.target === event.currentTarget) {
-      closeModal(popupProfile)
+  // close modal via key "esc"
+  document.addEventListener('keydown', function(evt) {
+    if( evt.key == "Escape"){
+      const modal = document.querySelector('.popup_opened');
+      closeModal(modal);
     }
-  })
+  });
 
-  popupCard.addEventListener("click", function(event) {
-    if (event.target === event.currentTarget) {
-      closeModal(popupCard)
+// close modal via overlay
+  document.addEventListener( 'click', (evt) => {
+    const modal = document.querySelector('.popup_opened');
+    if(evt.target === modal) {
+      closeModal(modal);
     }
-  })
+  });
 
-  popupImg.addEventListener("click", function(event) {
-    if (event.target === event.currentTarget) {
-      closeModal(popupImg)
-    }
-  })
