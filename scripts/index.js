@@ -116,15 +116,7 @@ popupCardBtn.addEventListener("click", () => {
   openModal(popupCard);
 });
 
-// btnClosePopupImg.addEventListener("click", () => closeModal(popupImg));
-
-// btnClosePopupProfile.addEventListener("click", () => closeModal(popupProfile));
-
 popupProfielBtn.addEventListener("click", openProfilePopup);
-
-// btnClosePopupCard.addEventListener("click", () => closeModal(popupCard));
-
-// popupProfielBtn.addEventListener("click", () => openModal(popupProfile));
 
 formPopupCard.addEventListener("submit", (event) => {
   event.preventDefault();
