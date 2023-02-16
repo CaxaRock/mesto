@@ -16,11 +16,8 @@ const inputProfileJob = document.querySelector(".popup__input_element_job");
 const submitProfileBtn = document.querySelector(".popup__submit-btn_profile");
 const nameFromProfile = document.querySelector(".profile__name");
 const jobFromProfile = document.querySelector(".profile__describe");
-const btnClosePopupProfile = document.querySelector(".popup__close-btn_type_profile");
-const btnClosePopupCard = document.querySelector(".popup__close-btn_type_card");
 const popupImg = document.querySelector(".popup_type_img");
-const btnClosePopupImg = document.querySelector(".popup__close-btn_type_img");
-const BtnsCommonClose = document.querySelectorAll(".popup__close-btn");
+const btnsCommonClose = document.querySelectorAll(".popup__close-btn");
 const imgPopupImg = document.querySelector(".popup__img");
 const popupCaption = document.querySelector(".popup__caption");
 const formPopupProfile = document.querySelector(".popup__edit-form");
@@ -52,8 +49,8 @@ function createCard(cardData) {
   return card;
 }
 
-function renderCard(renderCards) {
-  const cards = renderCards.map((item) => {
+function renderCards(cardDataList) {
+  const cards = cardDataList.map((item) => {
     return createCard(item);
   });
   cardsContainer.prepend(...cards);
@@ -103,12 +100,12 @@ function resetFormInputs(form) {
   form.reset();
 }
 
-BtnsCommonClose.forEach((button) => {
+btnsCommonClose.forEach((button) => {
   const modal = button.closest(".popup");
   button.addEventListener("click", () => closeModal(modal));
 });
 
-renderCard(initialCards);
+renderCards(initialCards);
 
 // listeners
 
